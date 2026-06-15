@@ -9,5 +9,9 @@
   },
   "enabledPlugins": {
     "nx@nx-claude-plugins": true
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
   }
 }
