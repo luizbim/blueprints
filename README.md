@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/logo.png" width="120" style="border-radius: 50%;" />
+</p>
+
 # Blueprints
 
 A collection of production-grade architecture patterns and projects built with TypeScript, AWS CDK, and event-driven design — each one a deliberate technical decision worth explaining.
