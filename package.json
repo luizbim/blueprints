@@ -2,20 +2,22 @@
   "name": "@org/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky"
+  },
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
     "@nx/js": "22.7.5",
     "@swc-node/register": "1.11.1",
     "@swc/core": "1.15.8",
     "@swc/helpers": "0.5.18",
+    "husky": "^9.1.7",
     "nx": "22.7.5",
     "prettier": "^3.8.1",
     "tslib": "^2.3.0",
     "typescript": "~5.9.2"
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "packageManager": "pnpm@11.7.0+sha512.19cc852c120c7125760f2443ee6be0ca5b40f9f50598de1a09a1f177503e010e57c23c77646e01e761de59bf874fb22a3398c33ab9691fc13eb946b6f0f4d620"
 }
