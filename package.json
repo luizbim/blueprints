@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "husky"
   },
+  "type": "module",
   "private": true,
   "devDependencies": {
     "@commitlint/cli": "^21.0.2",
