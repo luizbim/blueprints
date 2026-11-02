@@ -20,5 +20,7 @@
       "type:config"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "zod": "^4.6.7"
+  }
 }
