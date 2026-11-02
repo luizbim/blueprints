@@ -1,0 +1,3 @@
+# A single Linux user with passwordless sudo; Agents run as the Operator
+
+The Devbox has one Linux user, the Operator, with passwordless sudo, and Agents run as that user. This looks at odds with [ADR-0001](./0001-agent-is-the-adversary.md), but it is deliberate. The security boundary is the Devbox itself, not Linux users: it is disposable, and it holds nothing that reaches beyond itself. A separate unprivileged `agent` user would make Agent work harder (repo permissions, package installs) without protecting anything that matters. The one thing sudo puts within reach, killing the Idle timer, is covered by the backstops in [ADR-0006](./0006-idle-detection-with-external-backstops.md).

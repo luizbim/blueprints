@@ -1,0 +1,43 @@
+{
+  "name": "@luizbim/agent-devbox-idle-detector",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@luizbim/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "nx": {
+    "name": "agent-devbox-idle-detector",
+    "targets": {
+      "build": {
+        "executor": "@nx/esbuild:esbuild",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "projects/agent-devbox/packages/idle-detector/dist",
+          "main": "projects/agent-devbox/packages/idle-detector/src/index.ts",
+          "tsConfig": "projects/agent-devbox/packages/idle-detector/tsconfig.lib.json",
+          "format": [
+            "esm"
+          ],
+          "declarationRootDir": "projects/agent-devbox/packages/idle-detector/src"
+        }
+      }
+    },
+    "tags": [
+      "project:agent-devbox",
+      "type:runtime"
+    ]
+  },
+  "dependencies": {}
+}

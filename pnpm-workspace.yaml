@@ -1,2 +1,6 @@
 packages:
-  - "packages/*"
+  - 'projects/*/packages/*'
+  - 'projects/*/infra'
+allowBuilds:
+  '@swc/core': true
+  nx: true

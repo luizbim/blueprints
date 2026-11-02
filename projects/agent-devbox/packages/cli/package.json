@@ -1,0 +1,46 @@
+{
+  "name": "@luizbim/agent-devbox",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@luizbim/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "name": "agent-devbox-cli",
+    "targets": {
+      "build": {
+        "executor": "@nx/esbuild:esbuild",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "projects/agent-devbox/packages/cli/dist",
+          "main": "projects/agent-devbox/packages/cli/src/index.ts",
+          "tsConfig": "projects/agent-devbox/packages/cli/tsconfig.lib.json",
+          "format": [
+            "esm"
+          ],
+          "declarationRootDir": "projects/agent-devbox/packages/cli/src"
+        }
+      }
+    },
+    "tags": [
+      "project:agent-devbox",
+      "type:cli"
+    ]
+  },
+  "dependencies": {}
+}
